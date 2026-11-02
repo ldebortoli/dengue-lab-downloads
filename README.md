@@ -14,6 +14,6 @@ Assisted translations cover the same 176 options as the official website. They a
 
 ## Current downloads
 
-Windows builder: [Dengue Lab 0.1.2](https://github.com/ldebortoli/dengue-lab-downloads/releases/tag/v0.1.2), with the new knob design. Linux and macOS retain their validated0.1.0 packages.
+Windows builder: [Dengue Lab 0.1.2](https://github.com/ldebortoli/dengue-lab-downloads/releases/tag/v0.1.2), with the new knob design. Linux and macOS retain their validated 0.1.0 packages.
 
-[Five examples made with Dengue Lab](https://github.com/ldebortoli/dengue-lab-downloads/releases/tag/examples-v0.1.0): Bombo, Guitarra Eléctrica, Arpa, Siku and Bajo, for Windowsx64/VST3. Each ZIP includes176language guides, sample credits/licences and complete corresponding AGPL engine source. Native automated validation passed; listening in a physical DAW remains unverified. These examples are not recordings attributed to Lucas.
+[Five examples made with Dengue Lab](https://github.com/ldebortoli/dengue-lab-downloads/releases/tag/examples-v0.1.0): Bombo, Guitarra Eléctrica, Arpa, Siku and Bajo, for Windows x64/VST3. Each ZIP includes guides in all 176 languages, sample credits/licences and complete corresponding AGPL engine source. Native automated validation passed; listening in a physical DAW remains unverified. These examples are not recordings attributed to Lucas.
