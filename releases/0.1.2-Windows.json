@@ -1,0 +1,12 @@
+{
+  "version": "0.1.2",
+  "scope": "Windows program and five Windows example instruments; other public platforms remain0.1.0",
+  "artifacts": [
+    {
+      "file": "Dengue-Lab-0.1.2-windows-x64.zip",
+      "bytes": 123121012,
+      "sha256": "a215b8167d1213a12d7f958a9d93aea278f40a13739157ef66d18a8f54ace48e"
+    }
+  ],
+  "sourceCommit": "1e46492fcb0fbfae9fba1ba9b389edf64c2f116d"
+}

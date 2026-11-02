@@ -1,0 +1,219 @@
+{
+  "version": "0.1.0",
+  "platform": "Windows-x64",
+  "generatorVersion": "0.1.2",
+  "instruments": [
+    {
+      "id": "bombo",
+      "name": "Dengue Bombo",
+      "file": "Dengue-bombo-0.1.0-Windows-x64.zip",
+      "bytes": 31643992,
+      "sha256": "7c1aac482598fb4e092c28eee6ca57ed931f257dca2637766c66cee4921cf85c",
+      "notes": [
+        36
+      ],
+      "samples": 1,
+      "license": "CC0-1.0",
+      "generator": "0.1.2",
+      "factoryIds": [
+        "ce864e8fc5e25650a1f00554a10209b9",
+        "74ed79ea502952adb0d3bd2c1cd9e699",
+        "43f6e9781c555513b17a47bfcf55c469",
+        "b6010d99bbdd53d1b32a7bec17cf04fc",
+        "e92d7fba5fa75d5eaa919e738b379203"
+      ],
+      "nativeFactoryClasses": [
+        {
+          "cid": "b6010d99bbdd53d1b32a7bec17cf04fc",
+          "name": "Dengue Bombo",
+          "category": "Audio Module Class"
+        },
+        {
+          "cid": "74ed79ea502952adb0d3bd2c1cd9e699",
+          "name": "Dengue Bombo",
+          "category": "Component Controller Class"
+        }
+      ],
+      "binarySha256": "2ffee00119cee942762f8aeca27edd8095a28491be7a501535a39f7f9367f1ef",
+      "validation": "Real frozen import/export workers, DLL/GetPluginFactory/class identity, exact native identity patch, PCM comparison and metadata check. Interactive DAW/listening deferred at user request."
+    },
+    {
+      "id": "guitarra",
+      "name": "Dengue Guitarra Eléctrica",
+      "file": "Dengue-guitarra-0.1.0-Windows-x64.zip",
+      "bytes": 39758073,
+      "sha256": "4d577682721a55a094184486846357b2ca7e6c0463810c564547be7ec8a3a9bc",
+      "notes": [
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60
+      ],
+      "samples": 13,
+      "license": "CC0-1.0",
+      "generator": "0.1.2",
+      "factoryIds": [
+        "182fd984c50153d1ad919dc1be5dccc0",
+        "8b17767e2fc952f7820e2fbb604f52df",
+        "bd78bdf2f5e15e7084791360ece5693c",
+        "382c1b9c63555b3e99b7839d29a79f0e",
+        "bf57b263a0785d6dbca459c6350914ce"
+      ],
+      "nativeFactoryClasses": [
+        {
+          "cid": "382c1b9c63555b3e99b7839d29a79f0e",
+          "name": "Dengue Guitarra Eléctrica",
+          "category": "Audio Module Class"
+        },
+        {
+          "cid": "8b17767e2fc952f7820e2fbb604f52df",
+          "name": "Dengue Guitarra Eléctrica",
+          "category": "Component Controller Class"
+        }
+      ],
+      "binarySha256": "9f07390c1145db9d59e2f049fa974f9d4c5272d5557d0f984a498ebf86af49c5",
+      "validation": "Real frozen import/export workers, DLL/GetPluginFactory/class identity, exact native identity patch, PCM comparison and metadata check. Interactive DAW/listening deferred at user request."
+    },
+    {
+      "id": "arpa",
+      "name": "Dengue Arpa",
+      "file": "Dengue-arpa-0.1.0-Windows-x64.zip",
+      "bytes": 41859197,
+      "sha256": "2a1c8138650858d5917ebf072c7aea9f4eb9473d3b647e669f435043a28f4b52",
+      "notes": [
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60
+      ],
+      "samples": 13,
+      "license": "CC0-1.0",
+      "generator": "0.1.2",
+      "factoryIds": [
+        "b4986e172d8955cdaf95be987e83c8c5",
+        "f27fa2e4710c5066bf84a75f6cd52dc1",
+        "14363d68b82b5ec98b25cead7e64339d",
+        "649a173bcfc65745a56b49dd3b23bbe0",
+        "1624c906a52951ec8e36ba5c76e1e633"
+      ],
+      "nativeFactoryClasses": [
+        {
+          "cid": "649a173bcfc65745a56b49dd3b23bbe0",
+          "name": "Dengue Arpa",
+          "category": "Audio Module Class"
+        },
+        {
+          "cid": "f27fa2e4710c5066bf84a75f6cd52dc1",
+          "name": "Dengue Arpa",
+          "category": "Component Controller Class"
+        }
+      ],
+      "binarySha256": "a0f62e1f9895023a325aeabc9da18129fabfbc5b52f3628b54353c40e15020b8",
+      "validation": "Real frozen import/export workers, DLL/GetPluginFactory/class identity, exact native identity patch, PCM comparison and metadata check. Interactive DAW/listening deferred at user request."
+    },
+    {
+      "id": "siku",
+      "name": "Dengue Siku",
+      "file": "Dengue-siku-0.1.0-Windows-x64.zip",
+      "bytes": 32862961,
+      "sha256": "b1bf41db75c10facffcbe2cd3119f2caffba17af9b3be0b181b4753798a7bd61",
+      "notes": [
+        65,
+        68,
+        72,
+        75,
+        79,
+        81
+      ],
+      "samples": 6,
+      "license": "CC-BY-SA-4.0",
+      "generator": "0.1.2",
+      "factoryIds": [
+        "8e007bcde37450a48c169e2aef01a793",
+        "9d2c791154f7594ea09aaa25d5c9bd1c",
+        "fccc3b182d0c55079bef1c79aa3a30d8",
+        "088beeaadad85caeaabfeace8dcad1d7",
+        "cca7641ed3495113afaa17626cf09925"
+      ],
+      "nativeFactoryClasses": [
+        {
+          "cid": "088beeaadad85caeaabfeace8dcad1d7",
+          "name": "Dengue Siku",
+          "category": "Audio Module Class"
+        },
+        {
+          "cid": "9d2c791154f7594ea09aaa25d5c9bd1c",
+          "name": "Dengue Siku",
+          "category": "Component Controller Class"
+        }
+      ],
+      "binarySha256": "1f7659575bf0557c8d58c7526f2e32d79b0304fc607c450cd0846a586d43b20e",
+      "validation": "Real frozen import/export workers, DLL/GetPluginFactory/class identity, exact native identity patch, PCM comparison and metadata check. Interactive DAW/listening deferred at user request."
+    },
+    {
+      "id": "bajo",
+      "name": "Dengue Bajo",
+      "file": "Dengue-bajo-0.1.0-Windows-x64.zip",
+      "bytes": 41106078,
+      "sha256": "298b584575b477cfdc007fd831031ff0a99e5edd6acb0118341cc995397170d9",
+      "notes": [
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48
+      ],
+      "samples": 13,
+      "license": "CC0-1.0",
+      "generator": "0.1.2",
+      "factoryIds": [
+        "136fe7b645d25098aaf146b8ea412b9c",
+        "665f385780a55ea3abffff4f5516358c",
+        "e036e713655c53378ef5e34ab1d30635",
+        "1f9ab9b04b6b59998f90acfe5fee86f4",
+        "bac6a5e43d5c590387ea4e8a3992f458"
+      ],
+      "nativeFactoryClasses": [
+        {
+          "cid": "1f9ab9b04b6b59998f90acfe5fee86f4",
+          "name": "Dengue Bajo",
+          "category": "Audio Module Class"
+        },
+        {
+          "cid": "665f385780a55ea3abffff4f5516358c",
+          "name": "Dengue Bajo",
+          "category": "Component Controller Class"
+        }
+      ],
+      "binarySha256": "0f3b976bea08cf4d33778e00374327aefee4c975a30a9d31b785cbfc52d39038",
+      "validation": "Real frozen import/export workers, DLL/GetPluginFactory/class identity, exact native identity patch, PCM comparison and metadata check. Interactive DAW/listening deferred at user request."
+    }
+  ],
+  "guiLaunched": false
+}
