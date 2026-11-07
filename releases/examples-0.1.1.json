@@ -1,0 +1,166 @@
+{
+  "version": "0.1.1",
+  "platform": "Windows-x64",
+  "generatorVersion": "0.1.4",
+  "artifacts": [
+    {
+      "file": "Dengue-bombo-0.1.1-Windows-x64.zip",
+      "bytes": 32096372,
+      "sha256": "ea82cf4e6d7071a47578f431c50409de3c49cb96a5da8badea2f5698a7071fb2",
+      "url": "https://github.com/ldebortoli/dengue-lab-downloads/releases/download/examples-v0.1.1/Dengue-bombo-0.1.1-Windows-x64.zip"
+    },
+    {
+      "file": "Dengue-guitarra-0.1.1-Windows-x64.zip",
+      "bytes": 40210516,
+      "sha256": "2ca8aa670ffdf0f4681fb91e2254e11d714251c7b35a7565541597dd0c7542f1",
+      "url": "https://github.com/ldebortoli/dengue-lab-downloads/releases/download/examples-v0.1.1/Dengue-guitarra-0.1.1-Windows-x64.zip"
+    },
+    {
+      "file": "Dengue-arpa-0.1.1-Windows-x64.zip",
+      "bytes": 42311618,
+      "sha256": "9e86652a9ff6b079fdf10d9bdc0414f83968b9b6636b751246ff798ed989b388",
+      "url": "https://github.com/ldebortoli/dengue-lab-downloads/releases/download/examples-v0.1.1/Dengue-arpa-0.1.1-Windows-x64.zip"
+    },
+    {
+      "file": "Dengue-siku-0.1.1-Windows-x64.zip",
+      "bytes": 33315393,
+      "sha256": "f7711f460e95e3865418fc11741762b61df801f65473d2fa560e963d186a0274",
+      "url": "https://github.com/ldebortoli/dengue-lab-downloads/releases/download/examples-v0.1.1/Dengue-siku-0.1.1-Windows-x64.zip"
+    },
+    {
+      "file": "Dengue-bajo-0.1.1-Windows-x64.zip",
+      "bytes": 41558495,
+      "sha256": "e97fde0b54afad0d2fc6404df1bf9974d6b9e29964c7f67834df7fdb95da01d2",
+      "url": "https://github.com/ldebortoli/dengue-lab-downloads/releases/download/examples-v0.1.1/Dengue-bajo-0.1.1-Windows-x64.zip"
+    },
+    {
+      "file": "SHA256SUMS.txt",
+      "bytes": 505,
+      "sha256": "af3c05eca4c98c1beb9ce4d15e4b88fdc8cf80dbdd64916fdc436d9afab76238",
+      "url": "https://github.com/ldebortoli/dengue-lab-downloads/releases/download/examples-v0.1.1/SHA256SUMS.txt"
+    }
+  ],
+  "instruments": [
+    {
+      "id": "bombo",
+      "name": "Dengue Bombo",
+      "notes": [
+        36
+      ],
+      "samples": 1,
+      "license": "CC0-1.0",
+      "factoryIds": [
+        "ce864e8fc5e25650a1f00554a10209b9",
+        "74ed79ea502952adb0d3bd2c1cd9e699",
+        "43f6e9781c555513b17a47bfcf55c469",
+        "b6010d99bbdd53d1b32a7bec17cf04fc",
+        "e92d7fba5fa75d5eaa919e738b379203"
+      ]
+    },
+    {
+      "id": "guitarra",
+      "name": "Dengue Guitarra Eléctrica",
+      "notes": [
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60
+      ],
+      "samples": 13,
+      "license": "CC0-1.0",
+      "factoryIds": [
+        "182fd984c50153d1ad919dc1be5dccc0",
+        "8b17767e2fc952f7820e2fbb604f52df",
+        "bd78bdf2f5e15e7084791360ece5693c",
+        "382c1b9c63555b3e99b7839d29a79f0e",
+        "bf57b263a0785d6dbca459c6350914ce"
+      ]
+    },
+    {
+      "id": "arpa",
+      "name": "Dengue Arpa",
+      "notes": [
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60
+      ],
+      "samples": 13,
+      "license": "CC0-1.0",
+      "factoryIds": [
+        "b4986e172d8955cdaf95be987e83c8c5",
+        "f27fa2e4710c5066bf84a75f6cd52dc1",
+        "14363d68b82b5ec98b25cead7e64339d",
+        "649a173bcfc65745a56b49dd3b23bbe0",
+        "1624c906a52951ec8e36ba5c76e1e633"
+      ]
+    },
+    {
+      "id": "siku",
+      "name": "Dengue Siku",
+      "notes": [
+        65,
+        68,
+        72,
+        75,
+        79,
+        81
+      ],
+      "samples": 6,
+      "license": "CC-BY-SA-4.0",
+      "factoryIds": [
+        "8e007bcde37450a48c169e2aef01a793",
+        "9d2c791154f7594ea09aaa25d5c9bd1c",
+        "fccc3b182d0c55079bef1c79aa3a30d8",
+        "088beeaadad85caeaabfeace8dcad1d7",
+        "cca7641ed3495113afaa17626cf09925"
+      ]
+    },
+    {
+      "id": "bajo",
+      "name": "Dengue Bajo",
+      "notes": [
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48
+      ],
+      "samples": 13,
+      "license": "CC0-1.0",
+      "factoryIds": [
+        "136fe7b645d25098aaf146b8ea412b9c",
+        "665f385780a55ea3abffff4f5516358c",
+        "e036e713655c53378ef5e34ab1d30635",
+        "1f9ab9b04b6b59998f90acfe5fee86f4",
+        "bac6a5e43d5c590387ea4e8a3992f458"
+      ]
+    }
+  ]
+}

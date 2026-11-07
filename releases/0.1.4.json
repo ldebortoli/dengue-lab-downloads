@@ -1,0 +1,48 @@
+{
+  "version": "0.1.4",
+  "sourceCommit": "f3cb452f2c3e9ce67445bb85d1bae8783d73f0b6",
+  "platforms": [
+    "Windows x64",
+    "Linux x86_64",
+    "macOS 15+ Apple Silicon",
+    "macOS 15+ Intel"
+  ],
+  "artifacts": [
+    {
+      "file": "Dengue-Lab-0.1.4-windows-x64.zip",
+      "bytes": 123428370,
+      "sha256": "fbefe69bb43e081960a4cc92dea2f527810de4b04f1b6ca6902b7d17cf7b2742",
+      "url": "https://github.com/ldebortoli/dengue-lab-downloads/releases/download/v0.1.4/Dengue-Lab-0.1.4-windows-x64.zip"
+    },
+    {
+      "file": "Dengue-Lab-0.1.4-linux-x86_64.tar.gz",
+      "bytes": 131112726,
+      "sha256": "74fcb37b9fe8b9196a2d561c302124c4dda30dc60fc4814fdc7b0e0c2fc6af98",
+      "url": "https://github.com/ldebortoli/dengue-lab-downloads/releases/download/v0.1.4/Dengue-Lab-0.1.4-linux-x86_64.tar.gz"
+    },
+    {
+      "file": "Dengue-Lab-0.1.4-macOS-arm64.zip",
+      "bytes": 92141269,
+      "sha256": "a93042f2105eade08ae90fde57f5c190c47616d5c8470fb4cf6a59bff8f8ec60",
+      "url": "https://github.com/ldebortoli/dengue-lab-downloads/releases/download/v0.1.4/Dengue-Lab-0.1.4-macOS-arm64.zip"
+    },
+    {
+      "file": "Dengue-Lab-0.1.4-macOS-x86_64.zip",
+      "bytes": 97751508,
+      "sha256": "4d20582c419fdf2aaee9210a493d7ad0c966992d008c17e111c5a7cf39b7b812",
+      "url": "https://github.com/ldebortoli/dengue-lab-downloads/releases/download/v0.1.4/Dengue-Lab-0.1.4-macOS-x86_64.zip"
+    },
+    {
+      "file": "Dengue-Lab-0.1.4-engine-source.zip",
+      "bytes": 23259649,
+      "sha256": "34206a03868c051297a5dac72e92a3d637102c8d6486f27d111a4ba9a80a84f0",
+      "url": "https://github.com/ldebortoli/dengue-lab-downloads/releases/download/v0.1.4/Dengue-Lab-0.1.4-engine-source.zip"
+    },
+    {
+      "file": "SHA256SUMS.txt",
+      "bytes": 502,
+      "sha256": "c9a0929f466ed7541f08bdcb15d714a44ac7af18446c33122f8e7211c90694bd",
+      "url": "https://github.com/ldebortoli/dengue-lab-downloads/releases/download/v0.1.4/SHA256SUMS.txt"
+    }
+  ]
+}
