@@ -1,0 +1,124 @@
+name: Build one portable release package
+
+on:
+  workflow_dispatch:
+    inputs:
+      platform:
+        type: choice
+        options: [linux-x86_64, macOS-arm64, macOS-x86_64]
+        required: true
+      tag:
+        type: string
+        required: true
+      source_sha256:
+        type: string
+        required: true
+
+permissions:
+  contents: read
+
+concurrency:
+  group: portable-${{ inputs.tag }}-${{ inputs.platform }}
+  cancel-in-progress: false
+
+jobs:
+  package:
+    if: github.actor == github.repository_owner
+    runs-on: ${{ inputs.platform == 'linux-x86_64' && 'ubuntu-24.04' || inputs.platform == 'macOS-arm64' && 'macos-15' || 'macos-15-intel' }}
+    timeout-minutes: 30
+    permissions:
+      contents: write # Access the draft input and attach the validated package.
+    env:
+      PLATFORM: ${{ inputs.platform }}
+      RELEASE_TAG: ${{ inputs.tag }}
+      SOURCE_SHA256: ${{ inputs.source_sha256 }}
+      SOURCE_DATE_EPOCH: '0'
+      CMAKE_BUILD_PARALLEL_LEVEL: '2'
+    steps:
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.13'
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: '24'
+      - name: Verify and extract the staged source
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          [[ "$RELEASE_TAG" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]]
+          [[ "$SOURCE_SHA256" =~ ^[0-9a-f]{64}$ ]]
+          [[ "$(gh release view "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" --json isDraft --jq .isDraft)" == true ]]
+          source="Dengue-Lab-${RELEASE_TAG#v}-build-source.zip"
+          gh release download "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" --pattern "$source"
+          printf '%s  %s\n' "$SOURCE_SHA256" "$source" | shasum -a 256 --check
+          python -m zipfile -e "$source" source
+      - name: Prepare pinned build inputs
+        working-directory: source
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -c 'import os,tomllib; assert tomllib.load(open("pyproject.toml","rb"))["project"]["version"] == os.environ["RELEASE_TAG"][1:]'
+          python scripts/prepare-native.py
+          python scripts/prepare-tools.py
+      - name: Build and verify macOS
+        if: runner.os == 'macOS'
+        working-directory: source
+        shell: bash
+        env:
+          QT_QPA_PLATFORM: offscreen
+        run: |
+          set -euo pipefail
+          python -m pip install -r requirements-dev.txt
+          python scripts/check-project.py
+          python -m pytest --cov --cov-report=json:coverage.json --cov-report=term-missing
+          python scripts/check-python-coverage.py coverage.json
+          cmake -S native -B build-native -DCMAKE_BUILD_TYPE=Release -DLAB_JUCE_DIR="$PWD/work/JUCE"
+          cmake --build build-native --parallel 2
+          python scripts/run-native-tests.py build-native
+          python scripts/prepare-engine.py
+          python -m PyInstaller --noconfirm DengueLab.spec
+          python scripts/smoke-macos.py 'dist/Dengue Lab.app' "${PLATFORM#macOS-}"
+          node scripts/check-privacy.mjs 'dist/Dengue Lab.app'
+          mkdir -p out
+          package="out/Dengue-Lab-${RELEASE_TAG#v}-${PLATFORM}.zip"
+          ditto -c -k --keepParent 'dist/Dengue Lab.app' "$package"
+          python scripts/audit-macos.py "$package"
+      - name: Build and verify Debian 12 compatible Linux
+        if: runner.os == 'Linux'
+        working-directory: source
+        shell: bash
+        run: |
+          set -euo pipefail
+          docker build --tag dengue-lab-portable --file scripts/Dockerfile.linux .
+          trap 'docker image rm dengue-lab-portable' EXIT
+          docker run --rm --init --network none --cpus 2 --memory 3g \
+            --volume "$PWD:/workspace" --env RELEASE_TAG --env SOURCE_DATE_EPOCH \
+            dengue-lab-portable bash -euc '
+              export QT_QPA_PLATFORM=offscreen
+              python scripts/check-project.py
+              python -m pytest --cov --cov-report=json:coverage.json --cov-report=term-missing
+              python scripts/check-python-coverage.py coverage.json
+              cmake -S native -B build-native -G Ninja -DCMAKE_BUILD_TYPE=Release -DLAB_JUCE_DIR="$PWD/work/JUCE"
+              cmake --build build-native --parallel 2
+              xvfb-run -a python scripts/run-native-tests.py build-native
+              python scripts/prepare-engine.py
+              python -m PyInstaller --noconfirm DengueLab.spec
+              xvfb-run -a python scripts/smoke-linux.py dist/DengueLab/DengueLab out
+              python scripts/package-portable.py dist/DengueLab "out/Dengue-Lab-${RELEASE_TAG#v}-linux-x86_64.tar.gz"
+            '
+          node scripts/check-privacy.mjs dist/DengueLab
+      - name: Attach only the verified portable to the draft
+        working-directory: source
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          [[ "$(gh release view "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" --json isDraft --jq .isDraft)" == true ]]
+          suffix=zip
+          if [[ "$PLATFORM" == linux-* ]]; then suffix=tar.gz; fi
+          package="out/Dengue-Lab-${RELEASE_TAG#v}-${PLATFORM}.$suffix"
+          shasum -a 256 "$package"
+          gh release upload "$RELEASE_TAG" "$package" --repo "$GITHUB_REPOSITORY"
