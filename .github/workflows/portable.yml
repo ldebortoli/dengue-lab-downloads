@@ -1,4 +1,5 @@
 name: Build one portable release package
+run-name: Portable ${{ inputs.platform }} for ${{ inputs.tag }}
 
 on:
   workflow_dispatch:
